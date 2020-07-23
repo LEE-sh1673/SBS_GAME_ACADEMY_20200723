@@ -1,38 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#define WIDTH 10
-#define HEIGHT 10
-
-#define OBJ_SIZE 3
-
-typedef enum Obj {
-  empty = 0,
-  block,
-  diamond,
-} Obj;
-
-char* objects[OBJ_SIZE] = {"□", "■", "♥"};
-int map[WIDTH][HEIGHT] = {
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 2, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-};
+#include "./settings.h"
+#define ARRSIZE(array) ((int)(sizeof(array)/sizeof(array[0])))
 
 int main(void) 
 {
-  for (int i = 0; i <WIDTH; i++) {
-    for (int j = 0; j <HEIGHT; j++) {
-      printf("%5s", objects[map[i][j]]);
-    }
-    printf("\n");
+  //PlayTeris();
+
+  int num[7] = {0,};
+  int len = ARRSIZE(num);
+
+  srand((unsigned)time(NULL));
+
+  for (int i = 0; i < len; i++) {
+    num[i] = rand() % len;
+    printf("num[%d] = %2d\n", i, num[i]);
   }
+
   return 0;
 }
