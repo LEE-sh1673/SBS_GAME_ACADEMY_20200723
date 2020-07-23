@@ -1,5 +1,5 @@
-#ifndef __settings_H__
-#define __settings_H__
+#ifndef __tetris_H__
+#define __tetris_H__
 
 #include <stdio.h>
 #include <stdlib.h>

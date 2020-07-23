@@ -1,4 +1,4 @@
-#include "./settings.h"
+#include "./tetris.h"
 
 void ClearBuffer()
 {

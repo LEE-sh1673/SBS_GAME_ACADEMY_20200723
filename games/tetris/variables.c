@@ -1,4 +1,4 @@
-#include "./settings.h"
+#include "./tetris.h"
 
 char* tetrisObj[TETRIS_OBJ_SIZE] = {" ", "■"};
 char* objects[MAP_OBJ_SIZE] = {"□", "■", "♥"};
